@@ -126,3 +126,5 @@ src/main/java/boot/spring/weather_api
 ├── infra        # Exceções da aplicação
 └── service      # Integração com a API de clima
 ```
+
+idea project: https://roadmap.sh/projects/weather-api-wrapper-service

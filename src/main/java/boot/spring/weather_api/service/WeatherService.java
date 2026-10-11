@@ -4,7 +4,6 @@ import boot.spring.weather_api.dto.VisualCrossingResponse;
 import boot.spring.weather_api.infra.WeatherNotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -18,7 +17,6 @@ public class WeatherService {
     @Value("${weather.api.key}")
     private String apiKey;
 
-    @Cacheable(value = "acao", key ="#city")
     public VisualCrossingResponse checkCity(String city){
         try {
             RestTemplate restTemplate = new RestTemplate();
